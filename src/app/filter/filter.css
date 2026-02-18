@@ -3,6 +3,7 @@ section{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    margin-inline:5px
 }
 
 input[type="text"] {

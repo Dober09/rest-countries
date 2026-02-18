@@ -1,6 +1,10 @@
-<header>
-    <h1>Where in the world?</h1>
-    <button>
-        <span>Dark Mode</span>
+<header [class.dark]="isDarkMode" [class.light]="!isDarkMode">
+    <h1 class="poppins-medium " >Where in the world?</h1>
+    <button (click)="toggleDarkMode()">
+        @if(isDarkMode){
+            <span class="poppins-regular">Dark Mode</span>
+        }@else {
+            <span class="poppins-regular">Light Mode</span>
+    }
     </button>
 </header>

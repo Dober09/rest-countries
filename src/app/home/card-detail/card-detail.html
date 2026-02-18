@@ -1,0 +1,38 @@
+<section>
+    <div class="back-btn" (click)="back()" >
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back
+    </div>
+    <div class="card-detail">
+        <img [src]="country.flags.svg" alt="Flag of {{ country.name }}">
+        <div class="txt">
+            <h2>{{ country.name }}</h2>
+            <div class="info">
+                <p><span>Native Name: </span>{{ country.nativeName }}</p>
+                <p><span>Population: </span>{{ country.population }}</p>
+                <p><span>Region: </span>{{ country.region }}</p>
+                <p><span>Sub Region: </span>{{ country.subregion }}</p>
+                <p><span>Capital: </span>{{ country.capital }}</p>
+            </div>
+            <div class="info">
+                <p><span>Top Level Domain: </span>{{country.topLevelDomain[0]}}</p>
+                <p><span>Currencies: </span>{{country.currencies[0].name}}</p>
+                <p><span>Languages: </span>
+                    @for(lan of country.languages; track lan.name ;let l = $last ){
+                        {{lan.name}} @if(!l){,}
+                    }</p>
+            </div>
+            <div class="border">
+                <p><span>Border Countries: </span></p>
+                <div class="border-countries">
+                @for(border of country.borders; track border){
+                    <span>{{ border }}</span>
+                }@empty {
+                    <p>No border countries</p>
+                }
+            </div>
+                       
+        </div>
+        </div>  
+    </div>
+</section>

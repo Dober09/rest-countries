@@ -1,6 +1,8 @@
 <section>
-    <input type="text" placeholder="Search for a country...">
-    <select name="region" id="region">
+    <input type="text" placeholder="Search for a country..." ngModel (ngModelChange)="onSearchChange($event)" />
+    <!-- <input type="text" placeholder="Search for a country..." [(ngModel)]="searchTerm" /> -->
+    <select name="region" id="region" ngModel (ngModelChange)="onRegionChange($event)">
+        <option value=""  selected>Filter by Region</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>

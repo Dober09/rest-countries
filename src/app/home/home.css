@@ -1,0 +1,17 @@
+.container{
+   background-color: hsl(207, 26%, 17%);
+   height:100%;
+                                    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container.light{
+    background-color: hsl(0, 0%, 100%);
+}   
