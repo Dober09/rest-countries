@@ -1,16 +1,17 @@
 <div class="container" [class.dark]="isDarkMode" [class.light]="!isDarkMode">
     <app-header  (darkModeChange)="onDarkModeChange($event)"/>
      @if(showDetail){
-            <app-card-detail [country]="selectedCountry" (onBack)="back()" />
+            <app-card-detail [country]="selectedCountry" (onBack)="back()" [isDarkMode]="isDarkMode"    />
         }
         @else{
         <div>
-            <app-filter (searchTermChange)="onSearchChange($event)" (regionChange)="onRegionChange($event)" />
+            <app-filter (searchTermChange)="onSearchChange($event)"
+             (regionChange)="onRegionChange($event)" [isDarkMode]="isDarkMode"/>
         
             <main>
                 <section class="countries">
                     @for(country of countries; track country.name){
-                        <app-card [country]="country" (onClick)="onCardClick($event)"/>
+                        <app-card [country]="country" (onClick)="onCardClick($event)" [isDarkMode]="isDarkMode"/>
                     } 
                 </section>
             </main>

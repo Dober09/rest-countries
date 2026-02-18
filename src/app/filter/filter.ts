@@ -1,4 +1,4 @@
-import { Component, inject,Output,EventEmitter  } from '@angular/core';
+import { Component, inject,Output,EventEmitter, Input  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
    
 
@@ -9,14 +9,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './filter.css',
 })
 export class Filter {
-  // searchTerm: string = ''; 
+  @Input() isDarkMode: boolean = true; // Input property to receive dark mode 
   
   @Output() searchTermChange = new EventEmitter<string>(); 
   @Output() regionChange = new EventEmitter<string>();     
   
 
   onSearchChange(searchValue: string): void {
-    // this.dataService.filterByName(searchValue);
+    
     console.log('Search term changed:', searchValue);
   
     this.searchTermChange.emit(searchValue); // Emit the search term to the parent component

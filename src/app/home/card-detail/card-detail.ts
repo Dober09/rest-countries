@@ -7,6 +7,7 @@ import { Component,EventEmitter,Input, Output } from '@angular/core';
   styleUrl: './card-detail.css',
 })
 export class CardDetail {
+  @Input() isDarkMode: boolean = true; // Input property to receive dark mode
   @ Input({required: true}) country: any   
   @Output() onBack= new EventEmitter<void>();
 

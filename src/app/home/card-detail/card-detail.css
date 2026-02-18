@@ -2,20 +2,18 @@
 .back-btn{
     display: inline-block;
     padding: 5px 20px;
-    /* background-color:hsl(209, 23%, 22%); */
-    color: hsl(0, 0%, 100%);
     border-radius: 5px;
-    margin-bottom: 40px;
+    
     cursor: pointer;
+    margin-left: 20px;
+    margin-top: 15px;   
 }
 
 .card-detail{
     width:320px;
     max-width: 800px;
-    /* background-color:hsl(209, 23%, 22%); */
-    /* border-radius: 5px; */
-    /* box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1); */
     padding: 20px;
+
 }
 
 .card-detail img{
@@ -28,7 +26,7 @@
 
 .txt{
     margin-left : 20px;
-    color: hsl(0, 0%, 100%);        
+    /* color: hsl(0, 0%, 100%);         */
 }   
 
 img{
@@ -47,4 +45,64 @@ img{
 
 .border-countries span{
     margin-left:10px;
+    margin-top: 5px;
+}
+
+
+section.dark .back-btn,
+section.dark .card-detail .txt{
+    color: hsl(0, 0%, 100%);    
+}
+
+section.light .back-btn,
+section.light .card-detail .txt{
+    color: hsl(200, 15%, 8%);
+}
+
+.light .back-btn{
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .back-btn{
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.light .border-countries span{
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dark .border-countries span{
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.info{
+    padding-block: 10px;
+}
+
+@media (min-width: 375px) {
+    .card-detail{
+        display: flex;
+        /* gap: 50px; */
+        align-items: flex-start;
+    }
+
+    .card-detail img{
+        width: 400px;
+        height: 300px;
+    }
+
+    .card-detail .txt{
+        margin-left: 50px;
+        /* background-color: red; */
+        
+    }
 }

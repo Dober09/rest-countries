@@ -5,13 +5,25 @@
 }
 
 main{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    place-content: center;
 
 }
 
 .container.light{
     background-color: hsl(0, 0%, 100%);
 }   
+
+
+@media (min-width: 375px) {
+    .countries{
+        display : flex;
+        flex-wrap: wrap;
+        justify-content:  space-between;
+        /* align-items: start; */
+    }
+}

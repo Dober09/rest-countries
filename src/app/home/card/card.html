@@ -1,4 +1,4 @@
-<div class="card" (click)="click()">
+<div class="card" (click)="click()" [class.dark]="isDarkMode" [class.light]="!isDarkMode">
     <img [src]="country.flags.svg" alt="Flag of {{ country.name }}">
     <div class="txt">
         <h2>{{ country.name }}</h2>
